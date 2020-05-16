@@ -5,7 +5,7 @@ branches:
 
 install: ""
 
-script: "cd /usr/src/ && mvn clean verify"
+script: "pwd && maven clean verify"
 
 services:
   - docker
