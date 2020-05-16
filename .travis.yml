@@ -5,7 +5,7 @@ branches:
 
 install: ""
 
-script: "cd ./java-backend/simple-api/ && mvn clean verify"
+script: "./usr/src/mvn clean verify"
 
 services:
   - docker
