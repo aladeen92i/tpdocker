@@ -1,0 +1,33 @@
+version: '3'
+services:
+  db:
+    container_name: basicpostgres
+    image: aladeen92i/basicpostgres
+    environment:
+      - POSTGRES_DB=db
+      - POSTGRES_USER=aladeen
+      - POSTGRES_PASSWORD=aladeen
+    volumes:
+      - /postgres/data:/var/lib/postgresql/data
+    networks:
+      - br0
+  back:
+    container_name: simple-api
+    image: aladeen92i/simple-api
+    depends_on:
+      - db
+    networks:
+      - br0
+  httpd:
+    container_name: my-apache2
+    image: aladeen92i/my-apache2
+    ports:
+      - "80:80"
+    depends_on:
+      - back
+    networks:
+      - br0
+
+networks:
+  br0:
+    driver: bridge
