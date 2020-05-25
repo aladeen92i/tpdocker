@@ -31,7 +31,6 @@ result:
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-
 docker pull openjdk
 
 ```yaml
@@ -59,12 +58,12 @@ docker run -it --name javademo aladeen92i/aladeendemo
 
 https://imgur.com/a/jQpfgTq
 
-##### impossible d'accéder a la demo dans un navigateur, il manque l'option -p qui permet de forwarder le port exposé du conteneur à l'hôte
+### impossible d'accéder a la demo dans un navigateur, il manque l'option -p qui permet de forwarder le port exposé du conteneur à l'hôte
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-##### controller :
+### controller :
 
 le student controller  sert à créer/modifier/supprimer des étudiants, retourne aussi un student grace a son {id} ou une liste de student sur la racine /
 
@@ -72,21 +71,21 @@ le greeting controller permet de retourner un message avec le nom de l'utilisate
 
 le departement controller va retourner de listes d'etudiants, le nombre,  en fonction des departements, voir meme des departements
 
-##### dao : 
+### dao : 
 
 ???? je ne fais pas de java habituellement je ne comprends pas.
 
-##### entity :
+### entity :
 
 sert à déclarer les modèles de données/classes que l'on va manipuler
 
-##### service :
+### service :
 
 pour moi les services sont les fonctions que ls controlleurs vont appeler afin d'executer les actions
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Docker compose i used :
+### Docker compose i used :
 
 	docker-compose up 
 	docker-compose down
