@@ -7,14 +7,14 @@ docker pull adminer
 
 create basic docker file for postgres, passing env args in the docker run command : 
 
-	```yaml
-	FROM postgres:11.6-alpine
+```yaml
+FROM postgres:11.6-alpine
 
-	COPY 01-CreateScheme.sql /docker-entrypoint-initdb.d
-	COPY 02-InsertData.sql /docker-entrypoint-initdb.d
+COPY 01-CreateScheme.sql /docker-entrypoint-initdb.d
+COPY 02-InsertData.sql /docker-entrypoint-initdb.d
 
-	ENV POSTGRES_DB=db
-	```
+ENV POSTGRES_DB=db
+```
 
 
 ```bash
