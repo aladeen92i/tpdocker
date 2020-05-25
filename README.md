@@ -18,7 +18,7 @@ create basic docker file for postgres, passing env args in the docker run comman
 
 ``docker build -t aladeen92i/basicpostgres . ``
 
-``docker run --name basicpostgres -v /postgres/data:/var/lib/postgresql/data -p 8000:8000 -e POSTGRES_USER=aladeen -e`` ``POSTGRES_PASSWORD=aladeen aladeen92i/basicpostgre:latest ``
+``docker run --name basicpostgres -v /postgres/data:/var/lib/postgresql/data -p 8000:8000 -e POSTGRES_USER=aladeen -e POSTGRES_PASSWORD=aladeen aladeen92i/basicpostgre:latest ``
 ``docker run --link 22a5ed757c71:db -p 8080:8080 adminer // is the name of my postgres container``
 
 result:
