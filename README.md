@@ -139,3 +139,13 @@ pour protéger notre repo, nous devons être les seuls à connaitres ces identif
 ### Why do we need this ?
 
 On a besoin des Dockerfile pour construire nos images 
+
+# TP 3 
+
+### what is $basearch?
+
+c'est une var d'envrionnement sur la dist redhat
+
+### Which port should be opened for https traffic?
+
+port 443
