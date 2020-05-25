@@ -96,30 +96,27 @@ pour moi les services sont les fonctions que ls controlleurs vont appeler afin d
 
 #TP2
 
-## Build and test your application
-
 ### Ok, what is it supposed to do ?
 
 ```bash
 mvn clean verirfy
 ```
 
-this command is supposed to build and launch tests defined in the application and return whether it was successful or not.
+cette commande build et lance les test définis dans l'application
 
 ### What are Unit tests ? Integration test ?
 
-Unit tests are supposed to check if one functionality of an application work as expected.
+Unit tests vont vérifier si les fonctions codées fonctionnent comme ce qu'on attend d'elles..
 
-Integration test checks if functionalities work between each other.
+Integration test vont vérifier si ces les changements apportés ne sont pas dangereux pour le reste de l'application.
 
 ### What is a db changelog job ?
 
-A db changelog job is meant to maintain database versioning
+Un db changelog job est fait pour maintenir les versions de la base de données 
 
 ### What are testcontainers?
 
-What Is testcontainers : a java library that run docker "lightweight, throwaway instances" to test common databases, 
-Selenium web browsers, etc. (according to google)
+TestContainers est une librairie Java qui va permettre de lancer des conteneurs à la volée afin de faire tourner les scripts de test puis ils seront détruits apres avoir produit leurs résultats
 
 
 ### Working CI with travis file.
@@ -133,12 +130,12 @@ script: mvn clean verify
 
 ### Why do we need this branch ?
 
-This branch is needed because we don't want to continuously Deliver on every branch that is created    
+we don't want to push changes directly on master, we want to work on dev and then we'll merge to master if this passes all the test in the CI  
 
 ### Secured variables, why ?
 
-To protect our repository from evil people, they shoudn't have our credentials.
+pour protéger notre repo, nous devons être les seuls à connaitres ces identifiants
 
 ### Why do we need this ?
 
-We need Dockerfile to build our images  
+On a besoin des Dockerfile pour construire nos images 
